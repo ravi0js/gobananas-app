@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Container } from "@mui/material";
+import NavBar from "./components/NavBar";
+import PostList from "./components/PostList";
+import UserList from "./components/UserList";
+import {ThemeProviderWrapper} from "./components/ThemeContext";
+import Footer from "./components/Footer";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <NavBar/>
+      <ThemeProviderWrapper>
+        <Container style={{ marginTop: "2rem", marginBottom: "4rem" }}>
+          <Routes>
+            <Route path="/" element={<PostList />} />
+            <Route path="/users" element={<UserList />} />
+          </Routes>
+        </Container>
+      </ThemeProviderWrapper>
+      <Footer/>
+    </Router>
   );
-}
+};
 
 export default App;
