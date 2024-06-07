@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Container } from "@mui/material";
 import NavBar from "./components/NavBar";
 import PostList from "./components/PostList";
 import UserList from "./components/UserList";
