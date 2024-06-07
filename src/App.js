@@ -12,12 +12,10 @@ const App = () => {
     <Router>
       <NavBar/>
       <ThemeProviderWrapper>
-        <Container style={{ marginTop: "2rem", marginBottom: "4rem" }}>
           <Routes>
             <Route path="/" element={<PostList />} />
             <Route path="/users" element={<UserList />} />
           </Routes>
-        </Container>
       </ThemeProviderWrapper>
       <Footer/>
     </Router>
