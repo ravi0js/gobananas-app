@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const JSONPLACEHOLDER_URL = process.env.REACT_APP_JSONPLACEHOLDER_URL;
-const RANDOMUSER_URL = process.env.REACT_APP_RANDOMUSER_URL;
+const JSONPLACEHOLDER_URL = "https://jsonplaceholder.typicode.com";
+const RANDOMUSER_URL = "https://randomuser.me/api";
 
 export const fetchPosts = async () => {
   try {
